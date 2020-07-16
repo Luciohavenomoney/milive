@@ -6,5 +6,5 @@ one player can parses m3U files
 
 Screenshots
 ============
-<img src="http://i.imgur.com/2hdMFzP.jpg" width=761 height=480>
-<img src="http://i.imgur.com/tdLiCVY.jpg" width=761 height=480>
+<img src="https://github.com/Luciohavenomoney/milive/blob/master/1.jpg" width=1080 height=2340>
+<img src="https://github.com/Luciohavenomoney/milive/blob/master/2.jpg" width=1080 height=2340>
