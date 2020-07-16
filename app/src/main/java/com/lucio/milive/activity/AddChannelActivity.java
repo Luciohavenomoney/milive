@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.lucio.milive.util.DownloadManager;
 import com.lucio.milive.util.DownloadObserver;
 import com.lucio.milive.R;
+import com.lucio.milive.util.JsonUtil;
 import com.lucio.milive.util.StatusBarUtil;
 
 import java.io.File;
@@ -74,9 +75,8 @@ public class AddChannelActivity extends AppCompatActivity {
     public void download(){
         hideSoftInput();
         rl_dialog.setVisibility(View.VISIBLE);
-        String file = Environment.getExternalStorageDirectory() + File.separator + "milive" + File.separator + "m3u";
         DownloadManager.download(editUrl.getText().toString().trim(),
-                file, editName.getText().toString().trim()+".m3u", new DownloadObserver() {
+                JsonUtil.listFile, editName.getText().toString().trim()+".m3u", new DownloadObserver() {
                     @Override
                     public void onSuccess(File file) {
                         rl_dialog.setVisibility(View.GONE);
