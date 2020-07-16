@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MILive</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="tip">问：m3u是什么？\n答：m3u文件是对播放列表的封装，内容为节目信息及其播放地址。iptv的播放地址无法保证长期有效，因此需要及时更新。\n\n问：在哪儿可以找到m3u文件下载地址？\n答：百度“IPTV播放源 m3u”即可，有很多最新的播放源地址。github上也有很多，例如 https://github.com/iptv-org/iptv\n\n问：我没有下载地址但有现成的m3u文件该怎么使用呢？\n答：将文件复制进播放列表文件夹内即可。(文件夹为手机存储根目录/milive/m3u)
+    </string>
+</resources>
