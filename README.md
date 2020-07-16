@@ -7,13 +7,11 @@ one player can parses m3U files
 Screenshots
 ===========
 
-<img src="https://github.com/Luciohavenomoney/milive/blob/master/1.jpg" width=240 height=520>
-
-<img src="https://github.com/Luciohavenomoney/milive/blob/master/2.jpg" width=240 height=520>
+<img src="https://github.com/Luciohavenomoney/milive/blob/master/1.jpg" width=240 height=520>  <img src="https://github.com/Luciohavenomoney/milive/blob/master/2.jpg" width=240 height=520>
 
 
 原始列表来源
 ======
 
-[](https://github.com/iptv-org/iptv)
-[](https://github.com/billy21/Tvlist-awesome-m3u-m3u8)
+[https://github.com/iptv-org/iptv](https://github.com/iptv-org/iptv)
+[https://github.com/billy21/Tvlist-awesome-m3u-m3u8](https://github.com/billy21/Tvlist-awesome-m3u-m3u8)
