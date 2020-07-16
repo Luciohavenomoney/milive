@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
-                android:textColor="#0099cc"
+                android:textColor="@color/colorMain"
                 android:text="节目名称"/>
 
             <TextView
@@ -94,7 +94,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         app:fabCustomSize="40dp"
-        android:backgroundTint="#0099cc"
+        android:backgroundTint="@color/colorMain"
         app:rippleColor="#009999"
         app:borderWidth="0dp"
         android:src="@drawable/ic_more" />
@@ -112,8 +112,8 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         app:fabCustomSize="40dp"
-        android:backgroundTint="#0099cc"
-        app:rippleColor="#009999"
+        android:backgroundTint="@color/colorMain"
+        app:rippleColor="@color/colorMainDark"
         app:borderWidth="0dp"
         android:src="@drawable/ic_add1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

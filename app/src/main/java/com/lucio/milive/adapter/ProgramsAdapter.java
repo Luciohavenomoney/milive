@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lucio.milive.R;
@@ -25,6 +26,7 @@ import butterknife.ButterKnife;
 public class ProgramsAdapter extends RecyclerView.Adapter<ProgramsAdapter.ProHolder> implements View.OnClickListener {
     private List<ProgramModel> list;
     private Context context;
+    private int selectedPosition = -1;
 
     public ProgramsAdapter(Context context) {
         this.context = context;
@@ -45,6 +47,11 @@ public class ProgramsAdapter extends RecyclerView.Adapter<ProgramsAdapter.ProHol
     public void onBindViewHolder(@NonNull ProHolder holder, int position) {
         ProgramModel model = list.get(position);
         holder.tvName.setText(model.name);
+        if(position == selectedPosition){
+            holder.tvName.setTextColor(ContextCompat.getColor(context,R.color.colorMain));
+        }else {
+            holder.tvName.setTextColor(ContextCompat.getColor(context,R.color.color_666));
+        }
     }
 
     @Override
@@ -55,18 +62,23 @@ public class ProgramsAdapter extends RecyclerView.Adapter<ProgramsAdapter.ProHol
     @Override
     public void onClick(View v) {
         ProHolder holder = (ProHolder) v.getTag();
-        int position = holder.getAdapterPosition();
-        if(clickCallback != null)
+        int position = holder.getAbsoluteAdapterPosition();
+        if(clickCallback != null && position != selectedPosition){
             clickCallback.onClick(position,list.get(position));
+            selectedPosition = position;
+            notifyDataSetChanged();
+        }
     }
 
     public void refresh(List<ProgramModel> list){
         this.list.clear();
         this.list.addAll(list);
+        selectedPosition = -1;
         notifyDataSetChanged();
     }
 
     public void refresh(){
+        selectedPosition = -1;
         notifyDataSetChanged();
     }
 

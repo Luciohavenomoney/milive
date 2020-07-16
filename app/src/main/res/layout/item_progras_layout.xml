@@ -18,14 +18,17 @@
             android:layout_width="120dp"
             android:layout_height="80dp"
             android:scaleType="centerCrop"
-            android:background="#f2f2f2"/>
+            android:background="@color/color_f2f2f2"/>
         <TextView
             android:id="@+id/tv_name"
             android:layout_marginStart="10dp"
-            android:padding="5dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#666666"
+            android:textColor="@color/color_666"
             android:textSize="16sp"
             android:text="CCTV - 1"/>
     </LinearLayout>

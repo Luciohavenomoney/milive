@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -22,6 +24,8 @@ import butterknife.ButterKnife;
 
 public class ListFragment extends BottomSheetDialogFragment {
 
+    @BindView(R.id.tv_close)
+    TextView tvClose;
     @BindView(R.id.list)
     RecyclerView list;
     private ProgramsAdapter programsAdapter;
@@ -43,7 +47,7 @@ public class ListFragment extends BottomSheetDialogFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        tvClose.setOnClickListener(v -> dismiss());
         list.setLayoutManager(new LinearLayoutManager(getContext()));
         programsAdapter = new ProgramsAdapter(getContext());
         programsAdapter.setClickCallback((position, bean) -> {
